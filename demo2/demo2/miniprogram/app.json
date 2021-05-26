@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/s1.png",
+        "selectedIconPath": "/image/s2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "打卡记录",
+        "iconPath": "/image/l2.png",
+        "selectedIconPath": "/image/l1.png"
+      }
+    ],
+    "selectedColor": "#122dcb"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "cloud":true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

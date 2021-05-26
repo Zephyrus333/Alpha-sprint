@@ -1,0 +1,46 @@
+<view class="body">
+
+  <view class="info">
+    <button class="btn" wx:if="{{!user.imgSrc}}" open-type="getUserInfo" bindgetuserinfo="login">登录</button>
+    <image class="tx"  wx:if="{{user.imgSrc}}" src="{{user.imgSrc}}" alt=""/>
+    <text  wx:if="{{user.imgSrc}}">{{user.name}}</text>
+</view>
+
+<view class="datestole">
+  <view class="time" wx:for="{{daArr}}" wx:key="index">
+      <view class="date" hidden="{{item.date == ''}}">打卡 {{item.date}}</view>
+      <view class="area" hidden="{{item.date == ''}}">
+        <image class="daka" src="../../image/d2.png"></image>
+        地点: {{item.area}}
+      </view>
+      <view class="date" hidden="{{item.date != ''}}">
+        <image class="daka" src="../../image/d1.png"></image>
+        <text>未打卡</text>
+      </view>
+  </view>
+  <!-- <view  class="time">
+      <view class="date">打卡2: 09: 00</view>
+      <view class="area"> 
+        地点: 福建省福州市福州大学至诚学院
+      </view>
+      <view class="date">
+        <image class="daka" src="../../image/d1.png"></image>
+        <text>未打卡</text>
+      </view>
+  </view> -->
+
+
+</view>
+
+<view class="da" bindtap="getauthSetting">
+  {{daArr[1].date ? "更新打卡" : "打卡"}}
+</view>
+<view class='share'>
+   <view class='like'>
+      <view class='iconfont icon-aixin'></view>
+   </view>
+   <view class='weixin'>
+       <button open-type="share" class='iconfont icon-weixin'>分享</button>
+   </view>
+</view>
+</view>
